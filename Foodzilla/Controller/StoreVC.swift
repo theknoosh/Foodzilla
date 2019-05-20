@@ -12,24 +12,24 @@ class StoreVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let cellId = "cellId"
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView .dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return foodItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as? ItemCell else {return UICollectionViewCell()}
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .red
+        let item = foodItems[indexPath.row]
+        
+        cell.configureCell(forItem: item)
         
         return cell
     }

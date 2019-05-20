@@ -48,18 +48,18 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PCc-KX-jCA">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="178"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCell" id="PCc-KX-jCA" customClass="ItemCell" customModule="Foodzilla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="178"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="178"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food1" translatesAutoresizingMaskIntoConstraints="NO" id="zwj-11-dZr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="178"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="178"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQe-4e-hC6">
-                                                    <rect key="frame" x="12" y="12" width="106" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQe-4e-hC6" userLabel="Item Name Lbl">
+                                                    <rect key="frame" x="12" y="12" width="126" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="baB-th-qQM"/>
                                                     </constraints>
@@ -68,7 +68,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYg-96-LcQ">
-                                                    <rect key="frame" x="12" y="37" width="106" height="20"/>
+                                                    <rect key="frame" x="12" y="37" width="126" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="SsL-eu-t4S"/>
                                                     </constraints>
@@ -90,6 +90,12 @@
                                             <constraint firstAttribute="bottom" secondItem="zwj-11-dZr" secondAttribute="bottom" id="sv5-wk-uFf"/>
                                             <constraint firstAttribute="trailing" secondItem="ZQe-4e-hC6" secondAttribute="trailing" constant="12" id="xsm-Zk-ZMb"/>
                                         </constraints>
+                                        <size key="customSize" width="150" height="178"/>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="zwj-11-dZr" id="ubW-o5-aNW"/>
+                                            <outlet property="itemNameLbl" destination="ZQe-4e-hC6" id="IDG-K8-W8P"/>
+                                            <outlet property="itemPriceLbl" destination="GYg-96-LcQ" id="eQD-Sb-9mw"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

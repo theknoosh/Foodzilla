@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1683FE22229120A0001798BF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683FE21229120A0001798BF /* Item.swift */; };
+		1683FE242291222D001798BF /* FoodItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683FE232291222D001798BF /* FoodItems.swift */; };
+		1683FE26229124FF001798BF /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683FE25229124FF001798BF /* ItemCell.swift */; };
 		16C06C272290593600ED4A22 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C06C262290593600ED4A22 /* DetailVC.swift */; };
 		16F9B1F1228CA71E00EFB60E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F9B1F0228CA71E00EFB60E /* AppDelegate.swift */; };
 		16F9B1F3228CA71E00EFB60E /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F9B1F2228CA71E00EFB60E /* StoreVC.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1683FE21229120A0001798BF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1683FE232291222D001798BF /* FoodItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItems.swift; sourceTree = "<group>"; };
+		1683FE25229124FF001798BF /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		16C06C262290593600ED4A22 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		16F9B1ED228CA71E00EFB60E /* Foodzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F9B1F0228CA71E00EFB60E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1683FE1D22912016001798BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16C06C262290593600ED4A22 /* DetailVC.swift */,
+				16F9B1F2228CA71E00EFB60E /* StoreVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1683FE1E2291204B001798BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1683FE25229124FF001798BF /* ItemCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1683FE1F22912060001798BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1683FE21229120A0001798BF /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1683FE2022912075001798BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1683FE232291222D001798BF /* FoodItems.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		16F9B1E4228CA71E00EFB60E = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +95,15 @@
 		16F9B1EF228CA71E00EFB60E /* Foodzilla */ = {
 			isa = PBXGroup;
 			children = (
+				1683FE2022912075001798BF /* Helpers */,
+				1683FE1F22912060001798BF /* Model */,
+				1683FE1E2291204B001798BF /* Views */,
+				1683FE1D22912016001798BF /* Controller */,
 				16F9B1F0228CA71E00EFB60E /* AppDelegate.swift */,
-				16F9B1F2228CA71E00EFB60E /* StoreVC.swift */,
 				16F9B1F4228CA71E00EFB60E /* Main.storyboard */,
 				16F9B1F7228CA71F00EFB60E /* Assets.xcassets */,
 				16F9B1F9228CA71F00EFB60E /* LaunchScreen.storyboard */,
 				16F9B1FC228CA71F00EFB60E /* Info.plist */,
-				16C06C262290593600ED4A22 /* DetailVC.swift */,
 			);
 			path = Foodzilla;
 			sourceTree = "<group>";
@@ -138,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1683FE22229120A0001798BF /* Item.swift in Sources */,
 				16F9B1F3228CA71E00EFB60E /* StoreVC.swift in Sources */,
+				1683FE26229124FF001798BF /* ItemCell.swift in Sources */,
 				16F9B1F1228CA71E00EFB60E /* AppDelegate.swift in Sources */,
 				16C06C272290593600ED4A22 /* DetailVC.swift in Sources */,
+				1683FE242291222D001798BF /* FoodItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
