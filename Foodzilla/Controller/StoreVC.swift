@@ -18,6 +18,9 @@ class StoreVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView .dataSource = self
+        
+        IAPService.instance.delegate = self
+        IAPService.instance.loadProducts()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -51,5 +54,12 @@ class StoreVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     @IBAction func restorePurchases(_ sender: Any) {
     }
     
+}
+
+extension StoreVC: IAPServiceDelegate {
+    
+    func iapProductsLoaded() {
+        print("IAP Products Loaded")
+    }
 }
 
